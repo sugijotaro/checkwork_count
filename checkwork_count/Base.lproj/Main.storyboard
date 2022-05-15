@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="checkwork_count" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-ir-IOI">
+                                <rect key="frame" x="177.5" y="475" width="59.5" height="80"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j68-U8-Jyh">
+                                <rect key="frame" x="177.5" y="595" width="59" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="50"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plus" destination="BYZ-38-t0r" eventType="touchUpInside" id="XM0-FW-zOi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-Uw-Nvv">
+                                <rect key="frame" x="183.5" y="685" width="47" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="50"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="minus" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pw-Yy-GTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MA-YA-ZoN">
+                                <rect key="frame" x="145" y="774.5" width="124" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="決定">
+                                    <fontDescription key="titleFontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="50"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="answer" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOS-RH-Z7e"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxr-uE-ecH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pxr-uE-ecH" secondAttribute="height" multiplier="1:1" id="Gsu-DK-B5U"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EYp-9W-WaN">
+                                <rect key="frame" x="41.5" y="282.5" width="331" height="331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EYp-9W-WaN" secondAttribute="height" id="d1w-BU-28E"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鳥は何羽いる？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY2-D9-lfL">
+                                <rect key="frame" x="119.5" y="44" width="175" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a65-Mz-hZT">
+                                <rect key="frame" x="147" y="613.5" width="120" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EYp-9W-WaN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06L-gO-b1S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pxr-uE-ecH" secondAttribute="trailing" id="0mZ-yT-87O"/>
+                            <constraint firstItem="wY2-D9-lfL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7V7-Ly-XKe"/>
+                            <constraint firstItem="pxr-uE-ecH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CUp-Ye-wSK"/>
+                            <constraint firstItem="wY2-D9-lfL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DKR-qm-lz7"/>
+                            <constraint firstItem="EYp-9W-WaN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="F72-Bz-tmV"/>
+                            <constraint firstItem="a65-Mz-hZT" firstAttribute="top" secondItem="EYp-9W-WaN" secondAttribute="bottom" id="JMf-Vn-xUA"/>
+                            <constraint firstItem="a65-Mz-hZT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ojd-9l-wVY"/>
+                            <constraint firstItem="1MA-YA-ZoN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.8" id="Snh-uS-cNZ"/>
+                            <constraint firstItem="dSp-Uw-Nvv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" id="Ujv-g1-tdD"/>
+                            <constraint firstItem="dSp-Uw-Nvv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WqZ-lI-o0b"/>
+                            <constraint firstItem="EYp-9W-WaN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XLZ-U0-Imk"/>
+                            <constraint firstItem="j68-U8-Jyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e14-lW-m6e"/>
+                            <constraint firstItem="1MA-YA-ZoN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fTp-T1-Gzm"/>
+                            <constraint firstItem="pxr-uE-ecH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gx4-VN-RIN"/>
+                            <constraint firstItem="6KS-ir-IOI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="oaA-0b-ykS"/>
+                            <constraint firstItem="6KS-ir-IOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ptT-Ve-1t0"/>
+                            <constraint firstItem="j68-U8-Jyh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.4" id="r51-yx-tXm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerButton" destination="1MA-YA-ZoN" id="MZX-Do-SOJ"/>
+                        <outlet property="answerLabel" destination="a65-Mz-hZT" id="Owu-Pt-wGg"/>
+                        <outlet property="birdView" destination="pxr-uE-ecH" id="n3t-sI-rvj"/>
+                        <outlet property="label" destination="6KS-ir-IOI" id="Qc7-kd-cZ9"/>
+                        <outlet property="seikaiImageView" destination="EYp-9W-WaN" id="FXA-zl-cu0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
